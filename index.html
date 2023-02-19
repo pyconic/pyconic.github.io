@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script src="js/stary-night.js"></script>
+    <link rel="stylesheet" href="css/starry-night.css">
+    <title>Always and Forever</title>
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      #scrolling-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        color: #ff004c;
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+   
+    </style>
+  </head>
+  <body>
+    
+    <audio src="lostboy.mp3" autoplay loop></audio>
+    <canvas id="stars"></canvas>
+    <div id="scrolling-text">ALWAYS AND FOREVER ~ ~ ~ ~ ~ MY ETERNAL VALENTINE</div>
+    <div id="poem-container"> hello
+      <div id="poem">- We are apart but not alone - The stars that light our separate skies <br>
+        Are sparks of love that never die - </div>
+    </div>
+    
+    <script>
+      var canvas = document.getElementById("stars");
+      var ctx = canvas.getContext("2d");
+      var moonSize = 500;
+      var moonX = canvas.width / 2;
+      var moonY = canvas.height / 2;
+      var scrollingText = document.getElementById("scrolling-text");
+      var message = "Always and Forever";
+      var speed = 50; // pixels per second
+
+
+      function drawMoon() {
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, moonSize, 0, 2 * Math.PI);
+        var moonGradient = ctx.createRadialGradient(
+          moonX,
+          moonY,
+          100,
+          moonX,
+          moonY,
+          moonSize
+        );
+        moonGradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+        moonGradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+        ctx.fillStyle = moonGradient;
+        ctx.fill();
+    }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var numStars = Math.floor(Math.random() * 1000) + 500;
+        for (var i = 0; i < numStars; i++) {
+          var x = Math.random() * canvas.width;
+          var y = Math.random() * canvas.height;
+          var size = Math.random() * 3 + 1;
+          var brightness = Math.random() * 50 + 50;
+          ctx.beginPath();
+          ctx.arc(x, y, size, 0, 2 * Math.PI);
+          ctx.fillStyle = "rgba(255, 255, 255, " + brightness / 100 + ")";
+          ctx.fill();
+        }
+      }
+
+      function twinkleStars(event) {
+        var mouseX = event.clientX - canvas.offsetLeft;
+        var mouseY = event.clientY - canvas.offsetTop;
+        var star = ctx.getImageData(mouseX, mouseY, 1, 1);
+        var alpha = star.data[3];
+        if (alpha > 0) {
+          star.data[3] = Math.max(alpha - 50, 0);
+          ctx.putImageData(star, mouseX, mouseY);
+        }
+      }
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        moonX = canvas.width / 2;
+        moonY = canvas.height / 2;
+      }
+
+      function scrollText() {
+        var currentTime = new Date().getTime();
+        var deltaTime = (currentTime - lastUpdateTime) / 1000; // convert to seconds
+        lastUpdateTime = currentTime;
+
+        var textWidth = scrollingText.offsetWidth;
+        var screenWidth = window.innerWidth;
+        var newPos = currentPos - speed * deltaTime;
+        currentPos = newPos;
+
+        if (newPos < -textWidth) {
+          currentPos = screenWidth;
+        }
+
+        scrollingText.style.transform = "translateX(" + currentPos + "px)";
+        window.requestAnimationFrame(scrollText);
+      }
+
+      var lastUpdateTime = new Date().getTime();
+      var currentPos = window.innerWidth;
+      window.requestAnimationFrame(scrollText);
+
+      canvas.addEventListener("mousemove", twinkleStars);
+      window.addEventListener("resize", resizeCanvas);
+
+      resizeCanvas();
+      setInterval(drawStars, 2000);
+      setInterval(drawMoon, 1000);
+    </script>
+  </body>
+</html>
