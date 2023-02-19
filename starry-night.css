@@ -1,0 +1,70 @@
+#message {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'NDLOGOS', cursive;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+  #scrolling-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: VT323;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  #poem-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    background-color: #ffffff00;
+  }
+  
+  #poem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color:rgb(255, 0, 0);
+    font-size: 24px;
+    font-family: VT323;
+    line-height: 1.5;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+
+ 
