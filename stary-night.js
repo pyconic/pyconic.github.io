@@ -7,9 +7,9 @@ var moonPhase = 0.5;
 var scrollingText = document.getElementById("scrolling-text");
 var message = "Always and Forever";
 var speed = 50; // pixels per second
-var typeWriter = document.getElementById('poem');
 
-const poem = "I wandered lonely as a cloud\nThat floats on high o'er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\nBeside the lake, beneath the trees,\nFluttering and dancing in the breeze."
+
+const poem = ""
 
 const poemContainer = document.getElementById('poem');
 poemContainer.innerText = poem;
@@ -29,6 +29,7 @@ function typeWriter() {
   }, speed);
 }
 
+
 function scrollText() {
   scrollingText.style.left = parseInt(scrollingText.style.left) - speed / 60 + "px";
   if (parseInt(scrollingText.style.left) + scrollingText.offsetWidth < 0) {
@@ -45,6 +46,7 @@ function resizeCanvas() {
 }
 
 function drawMoon() {
+
   ctx.beginPath();
   ctx.arc(moonX, moonY, moonRadius, 0, 2 * Math.PI);
   var gradient = ctx.createRadialGradient(moonX, moonY, moonRadius / 4, moonX, moonY, moonRadius);
@@ -85,6 +87,7 @@ function twinkleStars(event) {
     ctx.putImageData(star, mouseX, mouseY);
   }
 }
+
 
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);

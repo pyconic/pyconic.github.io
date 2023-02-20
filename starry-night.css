@@ -66,5 +66,38 @@ body {
     z-index: 1;
   }
   
-
+  @keyframes move-flap-owl {
+    0% {
+      transform: translateX(0) rotate(0);
+    }
+    25% {
+      transform: translateX(575px) rotate(10deg);
+    }
+    50% {
+      transform: translateX(0px) rotate(0);
+    }
+    75% {
+      transform: translateX(575px) rotate(-10deg);
+    }
+    100% {
+      transform: translateX(0px) rotate(0);
+    }
+  }
+  
+  #owl {
+    position: absolute;
+    top: 10%;
+    left: -50px;
+    transform: translate(-50%, -50%);
+    animation: move-flap-owl 15s ease-in-out infinite;
+    z-index: 9999;
+  }
+  
+  img#owl {
+    width: 300px;
+    height: auto;
+  }
+  
+  .flap-wings {
+    animation: none; /* Remove previous flap animation */
  
