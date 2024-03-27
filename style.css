@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'GreenScreen';
+    src: url('/Greenscr.ttf') format('truetype');
+}
+
+
 body {
     background-color: #000;
     color: #0f0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'GreenScreen', 'Courier New', Courier, monospace;
     font-size: 16px;
     line-height: 1.6;
 }
