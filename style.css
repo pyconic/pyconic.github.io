@@ -1,0 +1,56 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.terminal {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 10px #0f0;
+}
+
+.header {
+    color: #0f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prompt {
+    color: #0f0;
+}
+
+.command {
+    color: #fff;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+    border-bottom: 1px solid #0f0;
+}
+
+a:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
