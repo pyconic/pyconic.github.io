@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #000; /* Keeps the black background */
+    background-color: #000;
     color: #0f0;
     font-family: 'GreenScreen', 'Courier New', Courier, monospace;
     font-size: 16px;
@@ -17,7 +17,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     z-index: 1;
@@ -27,26 +28,37 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #1e1e1e; /* Dark gray to mimic the terminal */
+    background-color: #1e1e1e; /* Dark gray background for terminal look */
     border: 2px solid #0f0;
-    box-shadow: 0 0 10px #0f0;
-    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 0 20px #0f0;
+    border-radius: 10px; /* Smooth, rounded corners */
     z-index: 2;
+    font-size: 16px;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Adds a glowing effect */
 }
 
 .header {
     color: #0f0;
     margin-bottom: 20px;
     text-align: center;
-    font-weight: bold; /* Makes the header stand out */
+    font-weight: bold; /* Make the header stand out */
 }
 
 .prompt {
     color: #00ff00; /* Bright green prompt for terminal */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glow effect for prompt */
 }
 
 .command {
-    color: #b5a642; /* Yellowish color for commands to differentiate */
+    background: -webkit-linear-gradient(90deg, #00ff00, #00cc00); /* Gradient text for command */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Makes the commands bold */
+}
+
+.output {
+    color: #ffffff; /* White output for easy readability */
+    text-shadow: 1px 1px 2px #0f0; /* Slight glow for output text */
 }
 
 a {
@@ -75,3 +87,4 @@ a:hover {
         opacity: 0;
     }
 }
+
