@@ -87,7 +87,6 @@ body {
     background-color: rgba(30, 30, 30, 0.6);
     color: #0f0;
     font-weight: bold;
-    box-shadow: 0px -2px 0px rgba(0, 255, 0, 0.6) inset; /* Green underline */
 }
 
 .tab:hover {
