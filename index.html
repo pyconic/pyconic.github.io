@@ -17,26 +17,68 @@
     <!-- Terminal with tabs -->
     <div class="terminal">
         <div class="terminal-tabs">
-            <div class="tab active">Home</div>
-            <div class="tab">Projects</div>
-            <div class="tab">Blog</div>
+            <div class="tab active" data-terminal="1">Home</div>
+            <div class="tab" data-terminal="2">Projects</div>
+            <div class="tab" data-terminal="3">Blog</div>
         </div>
 
-        <div class="header">mk@portfolio:~$</div>
-        <div class="content">
-            <p><span class="prompt">mk@portfolio:~$</span> <span class="command">cat about.txt</span></p>
-            <p>Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance.</p>
-            <p><span class="prompt">mk@portfolio:~$</span> <span class="command">ls projects/</span></p>
-            <ul>
-                <li> <a href="https://github.com/pyconic/Network-Traffic-Analysis-Visualization" target="_blank">Network Traffic Analysis Visualization</a></li>
-                <li> <a href="https://github.com/pyconic/Port-Scanner" target="_blank">Port Scanner</a></li>
-            </ul>
-            <p><span class="prompt">mk@portfolio:~$</span> <span class="command">cat contact.txt</span></p>
-            <p>Email: mocon91@wgu.edu</p>
-            <p>GitHub: <a href="https://github.com/pyconic" target="_blank">github.com/pyconic</a></p>
-            <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+        <!-- Terminal 1 Content -->
+        <div class="terminal-content" id="terminal-1">
+            <div class="header">mk@portfolio:~$</div>
+            <div class="content">
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command">cat about.txt</span></p>
+                <p>Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance.</p>
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command">ls projects/</span></p>
+                <ul>
+                    <li> <a href="https://github.com/pyconic/Network-Traffic-Analysis-Visualization" target="_blank">Network Traffic Analysis Visualization</a></li>
+                    <li> <a href="https://github.com/pyconic/Port-Scanner" target="_blank">Port Scanner</a></li>
+                </ul>
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command">cat contact.txt</span></p>
+                <p>Email: mocon91@wgu.edu</p>
+                <p>GitHub: <a href="https://github.com/pyconic" target="_blank">github.com/pyconic</a></p>
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+            </div>
+        </div>
+
+        <!-- Terminal 2 Content (Blank Terminal) -->
+        <div class="terminal-content" id="terminal-2" style="display: none;">
+            <div class="header">mk@portfolio:~$</div>
+            <div class="content">
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+            </div>
+        </div>
+
+        <!-- Terminal 3 Content (Blank Terminal) -->
+        <div class="terminal-content" id="terminal-3" style="display: none;">
+            <div class="header">mk@portfolio:~$</div>
+            <div class="content">
+                <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript to handle tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const terminals = document.querySelectorAll('.terminal-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove the active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+
+                // Add the active class to the clicked tab
+                tab.classList.add('active');
+
+                // Hide all terminals
+                terminals.forEach(terminal => terminal.style.display = 'none');
+
+                // Show the terminal that corresponds to the clicked tab
+                const terminalId = tab.getAttribute('data-terminal');
+                document.getElementById(`terminal-${terminalId}`).style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
 
