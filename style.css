@@ -75,21 +75,27 @@ body {
     color: #fff;
     padding: 5px 10px;
     margin-right: 5px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px; /* Smaller font size */
     cursor: pointer;
     transition: background-color 0.2s ease;
+    border: 1px solid #00ff00; /* Neon green outline */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neon glow effect */
 }
 
 .tab.active {
     background-color: rgba(30, 30, 30, 0.6);
     color: #0f0;
     font-weight: bold;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter glow for active tab */
 }
 
 .tab:hover {
-    background-color: rgba(43, 43, 43, 0.6); /* Slightly brighter on hover */
+    background-color: rgba(43, 43, 43, 0.8); /* Slightly darker on hover */
+    transform: translateY(-2px); /* Moves the tab up slightly */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5); /* Stronger shadow when hovered */
 }
 
 /* Terminal Styling */
