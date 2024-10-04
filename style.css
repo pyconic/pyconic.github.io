@@ -129,10 +129,27 @@ body {
 
 /* Flicker effect for the terminal */
 @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.98; }
-    80% { opacity: 0.9; }
-    90% { opacity: 1; }
+    0% { opacity: 1; }
+    10% { opacity: 0.85; }
+    20% { opacity: 1; }
+    30% { opacity: 0.8; }
+    40%, 50%, 60% { opacity: 0.95; }
+    70% { opacity: 0.9; }
+    80% { opacity: 1; }
+    90% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+    50% {
+        box-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00; /* Brightest point */
+    }
+    100% {
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Dimmer point */
+    }
 }
 
 /* Terminal Styling */
@@ -148,7 +165,7 @@ body {
     position: relative;
     font-size: 11px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    animation: flicker 3s infinite; /* Add flicker effect */
+    animation: flicker 3s infinite, pulseGlow 4s ease-in-out infinite; /* Pulsating glow effect */
 }
 
 .header {
