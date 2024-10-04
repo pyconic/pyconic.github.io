@@ -166,7 +166,7 @@ body {
     position: relative;
     font-size: 13px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    animation: flicker 6s infinite, pulseGlow 6s ease-in-out infinite; /* Pulsating glow effect */
+    animation: flicker 9s infinite, pulseGlow 6s ease-in-out infinite; /* Pulsating glow effect */
 }
 
 .header {
