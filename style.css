@@ -163,7 +163,7 @@ body {
     border-radius: 10px;
     z-index: 2;
     position: relative;
-    font-size: 11px;
+    font-size: 13px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
     animation: flicker 3s infinite, pulseGlow 4s ease-in-out infinite; /* Pulsating glow effect */
 }
