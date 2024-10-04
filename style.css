@@ -127,6 +127,45 @@ body {
     transform: translateY(-2px); /* Moves tab up slightly */
 }
 
+/* Project Tabs Styling */
+.project-tab {
+    margin-bottom: 10px;
+}
+
+.project-title {
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 10px;
+    color: #00ff00;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-title:hover {
+    background-color: rgba(43, 43, 43, 0.8);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter on hover */
+}
+
+.project-content {
+    display: none;
+    padding: 10px;
+    background-color: rgba(43, 43, 43, 0.8);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Transition for smooth expand/collapse effect */
+.project-content {
+    transition: max-height 0.5s ease;
+}
+
 /* Position GitHub and email in the top-right */
 .top-right-info {
     position: absolute;
