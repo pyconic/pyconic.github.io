@@ -25,40 +25,74 @@ body {
     z-index: 1;
 }
 
-/* Starry background layers for seamless infinite scroll */
+/* Starry background layers for infinite scroll */
 .stars, .stars2, .stars3 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%; /* Double the height so stars can repeat smoothly */
+    height: 200%;
     background-repeat: repeat-y;
     z-index: 0;
 }
 
 .stars {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    animation: moveStars 200s linear infinite; /* Seamless scrolling */
+    animation: moveStars 200s linear infinite; /* Slowed down */
 }
 
 .stars2 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.5;
-    animation: moveStars 300s linear infinite; /* Slower movement for depth */
+    animation: moveStars 300s linear infinite; /* Slowed down */
 }
 
 .stars3 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.3;
-    animation: moveStars 400s linear infinite; /* Slowest layer for distant stars */
+    animation: moveStars 400s linear infinite; /* Slowed down */
 }
 
-/* Infinite scrolling keyframes */
+/* Infinite scrolling animation */
 @keyframes moveStars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); } /* Moves up half of the height for seamless looping */
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); } /* Seamless movement */
 }
 
+/* Terminal Tabs at the top */
+.terminal-tabs {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #2e2e2e;
+    padding: 5px;
+    border-bottom: 2px solid #0f0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tab {
+    background-color: #3c3c3c;
+    color: #fff;
+    padding: 8px 15px;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px -3px 0px #0f0 inset;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #1e1e1e;
+    color: #0f0;
+    font-weight: bold;
+    box-shadow: 0px -3px 0px #0f0 inset;
+}
+
+.tab:hover {
+    background-color: #2b2b2b;
+}
+
+/* Terminal Styling */
 .terminal {
     max-width: 800px;
     margin: 50px auto;
