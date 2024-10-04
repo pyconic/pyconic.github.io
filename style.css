@@ -80,7 +80,7 @@ body {
     font-size: 12px; /* Smaller font size */
     cursor: pointer;
     transition: background-color 0.2s ease;
-    border: 1px solid #00ff00; /* Neon green outline */
+    border: none; /* No outline */
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neon glow effect */
     transition: background-color 0.2s ease, transform 0.2s ease;
     position: relative;
@@ -91,7 +91,7 @@ body {
     background-color: rgba(30, 30, 30, 0.6);
     color: #0f0;
     font-weight: bold;
-    border: 1px solid #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.2); /* Subtle green outline for active tab */
     box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter glow for active tab */
 }
 
