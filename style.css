@@ -140,15 +140,16 @@ body {
     100% { opacity: 1; }
 }
 
+/* Subtle Pulsating glow with adjusted opacity */
 @keyframes pulseGlow {
     0% {
-        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5); /* Lower opacity */
     }
     50% {
-        box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00; /* Brightest point */
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.6); /* Slightly brighter but more transparent */
     }
     100% {
-        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Dimmer point */
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5); /* Back to subtle */
     }
 }
 
