@@ -25,45 +25,45 @@ body {
     z-index: 1;
 }
 
-/* Starry background layers for infinite scroll */
+/* Starry background layers for subtle infinite scroll */
 .stars, .stars2, .stars3 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%; /* Double the height to create the looping effect */
-    background-repeat: repeat-y; /* Repeat the star pattern vertically */
+    height: 200%;
+    background-repeat: repeat-y;
     z-index: 0;
 }
 
 .stars {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    animation: moveStars 100s linear infinite; /* Infinite scrolling animation */
+    animation: moveStars 150s ease infinite; /* Slow down and use ease for smooth looping */
 }
 
 .stars2 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.5;
-    animation: moveStars 200s linear infinite;
+    animation: moveStars 250s ease infinite; /* Slow down the second layer even more */
 }
 
 .stars3 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.3;
-    animation: moveStars 300s linear infinite;
+    animation: moveStars 350s ease infinite; /* Make the slowest layer very subtle */
 }
 
-/* Infinite scrolling animation */
+/* Infinite scrolling animation with subtle easing */
 @keyframes moveStars {
     from { transform: translateY(0); }
-    to { transform: translateY(-100%); } /* Scroll the background up by its full height */
+    to { transform: translateY(-100%); } /* Stars move up fully */
 }
 
 .terminal {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(30, 30, 30, 0.5); /* Dark gray with 80% opacity for transparency */
+    background-color: rgba(30, 30, 30, 0.5); /* Adjusting transparency for terminal */
     border: 2px solid #0f0;
     box-shadow: 0 0 20px #0f0;
     border-radius: 10px;
@@ -123,5 +123,6 @@ a:hover {
         opacity: 0;
     }
 }
+
 
 
