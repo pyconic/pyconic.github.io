@@ -249,6 +249,7 @@ body {
     position: relative;
     font-size: 13px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    caret-color: transparent; /* Hides the default blinking text cursor */
     animation: flicker 9s infinite, pulseGlow 6s ease-in-out infinite; /* Pulsating glow effect */
 }
 
