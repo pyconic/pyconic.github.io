@@ -38,19 +38,19 @@ body {
 
 .stars {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    animation: moveStars 50s linear infinite; /* Infinite scrolling animation */
+    animation: moveStars 100s linear infinite; /* Infinite scrolling animation */
 }
 
 .stars2 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.5;
-    animation: moveStars 100s linear infinite;
+    animation: moveStars 200s linear infinite;
 }
 
 .stars3 {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     opacity: 0.3;
-    animation: moveStars 150s linear infinite;
+    animation: moveStars 300s linear infinite;
 }
 
 /* Infinite scrolling animation */
