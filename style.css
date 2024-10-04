@@ -76,7 +76,6 @@ body {
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 5px 5px 0 0;
-    box-shadow: 0px -2px 0px rgba(0, 255, 0, 0.6) inset; /* Subtle green shadow */
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px; /* Smaller font size */
     cursor: pointer;
