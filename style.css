@@ -127,6 +127,14 @@ body {
     transform: translateY(-2px); /* Moves tab up slightly */
 }
 
+/* Flicker effect for the terminal */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.98; }
+    80% { opacity: 0.9; }
+    90% { opacity: 1; }
+}
+
 /* Terminal Styling */
 .terminal {
     max-width: 800px;
@@ -138,8 +146,9 @@ body {
     border-radius: 10px;
     z-index: 2;
     position: relative;
-    font-size: 16px;
+    font-size: 11px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    animation: flicker 5s infinite; /* Add flicker effect */
 }
 
 .header {
