@@ -27,7 +27,7 @@
             <div class="tab" data-terminal="3">/Blog</div>
         </div>
 
-        <!-- Terminal 1 Content (Boot sequence added) -->
+        <!-- Terminal 1 Content (Home - Boot sequence added) -->
         <div class="terminal-content" id="terminal-1">
             <div class="header">mk@portfolio:~$</div>
             <div class="content">
@@ -35,11 +35,27 @@
             </div>
         </div>
 
-        <!-- Terminal 2 Content (Blank Terminal) -->
+        <!-- Terminal 2 Content (Projects with expandable tabs) -->
         <div class="terminal-content" id="terminal-2" style="display: none;">
             <div class="header">mk@portfolio:~$</div>
             <div class="content">
-                <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+                <div class="project-tab">
+                    <div class="project-title" onclick="toggleProject(this)">Network Traffic Analysis Visualization</div>
+                    <div class="project-content">
+                        <p>Description: A tool that visualizes real-time network traffic.</p>
+                        <p>Technologies: Python, Flask, D3.js</p>
+                        <p><a href="https://github.com/pyconic/Network-Traffic-Analysis-Visualization" target="_blank">View on GitHub</a></p>
+                    </div>
+                </div>
+
+                <div class="project-tab">
+                    <div class="project-title" onclick="toggleProject(this)">Port Scanner</div>
+                    <div class="project-content">
+                        <p>Description: A lightweight Python-based port scanner.</p>
+                        <p>Technologies: Python, Scapy</p>
+                        <p><a href="https://github.com/pyconic/Port-Scanner" target="_blank">View on GitHub</a></p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -74,10 +90,10 @@
             });
         });
 
-        // Boot sequence typing effect
+        // Boot sequence typing effect (faster)
         document.addEventListener('DOMContentLoaded', () => {
             const bootText = `Initializing system...\nBIOS loaded.\nBoot sequence initiated...\nLoading environment...\n\nWelcome to mk@portfolio:~$\nHi, I'm Molly.\nI'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance.`;
-            const typingSpeed = 50;
+            const typingSpeed = 10; // Speed up typing
             let index = 0;
 
             function type() {
@@ -86,18 +102,28 @@
                     index++;
                     setTimeout(type, typingSpeed);
                 } else {
-                    document.querySelector('.typewriter-text').classList.add('caret');
+                    // Show blinking caret at the end of the boot sequence
+                    document.querySelector('.typewriter-text').innerHTML += ' <span class="caret">&#9608;</span>';
                 }
             }
 
-            // Optional delay before starting the typing animation
-            setTimeout(() => {
-                type();
-            }, 1000);
+            // Start typing the boot sequence right away with no delay
+            type();
         });
+
+        // Function to toggle project visibility
+        function toggleProject(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
     </script>
 </body>
 </html>
+
 
 
 
