@@ -63,7 +63,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(30, 30, 30, 0.8); /* Dark gray with 80% opacity for transparency */
+    background-color: rgba(30, 30, 30, 0.5); /* Dark gray with 80% opacity for transparency */
     border: 2px solid #0f0;
     box-shadow: 0 0 20px #0f0;
     border-radius: 10px;
