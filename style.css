@@ -65,7 +65,9 @@ body {
     justify-content: flex-start;
     background-color: #2e2e2e;
     padding: 0;
-    margin-bottom: 10px; /* A little space below tabs */
+    margin: 0;
+    border: none;
+    background: none;
 }
 
 .tab {
