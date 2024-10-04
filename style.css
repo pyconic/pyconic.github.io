@@ -148,7 +148,7 @@ body {
     position: relative;
     font-size: 11px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    animation: flicker 5s infinite; /* Add flicker effect */
+    animation: flicker 3s infinite; /* Add flicker effect */
 }
 
 .header {
