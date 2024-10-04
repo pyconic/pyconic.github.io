@@ -127,6 +127,50 @@ body {
     transform: translateY(-2px); /* Moves tab up slightly */
 }
 
+/* Position GitHub and email in the top-right */
+.top-right-info {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.top-right-info a {
+    color: #00ff00;
+    text-decoration: none;
+    border-bottom: 1px solid #00ff00;
+}
+
+.top-right-info a:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+/* Typewriter effect text */
+.typewriter-text {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    font-size: 16px;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    white-space: pre-wrap;
+}
+
+/* Blinking caret */
+.caret {
+    border-right: 2px solid #00ff00;
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from { border-color: #00ff00; }
+    to { border-color: transparent; }
+}
+
+
 /* Flicker effect for the terminal */
 @keyframes flicker {
     0% { opacity: 1; }
