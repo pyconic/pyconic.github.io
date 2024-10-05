@@ -28,14 +28,14 @@
         </div>
 
         <!-- Terminal 1 Content (Home - Boot sequence added) -->
-        <div class="terminal-content" id="terminal-1">
+        <div class="terminal-content" id="terminal-1" style="overflow-y: auto;">
             <div class="content">
                 <pre class="sweep-text"></pre> <!-- Boot sequence will be displayed here -->
             </div>
         </div>
 
         <!-- Terminal 2 Content (Projects with expandable tabs) -->
-        <div class="terminal-content" id="terminal-2" style="display: none;">
+        <div class="terminal-content" id="terminal-2" style="display: none; overflow-y: auto;">
             <div class="content">
                 
                 <div class="project-tab">
@@ -67,10 +67,42 @@
             </div>
         </div>
 
-        <!-- Terminal 3 Content (Blank Terminal) -->
-        <div class="terminal-content" id="terminal-3" style="display: none;">
-            <div class="content">
-                <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
+        <!-- Terminal 3 Content (Blog with collapsible posts) -->
+        <div class="terminal-content" id="terminal-3" style="display: none; overflow-y: auto;">
+            <div class="content blog-terminal">
+                <!-- ASCII Art Header for Blog -->
+                <pre class="ascii-art">
+  ____   ____  ____     ____    ___    __    __  __   ____  
+ |  _ \ / ___||  _ \   / ___|  / _ \  / /_  / / / /_ / ___| 
+ | |_) |\___ \| |_) | | |     | | | | | '_ \| | | '_ \\___ \ 
+ |  __/  ___) |  __/  | |___  | |_| | | (_) | | | (_) |___) |
+ |_|    |____/|_|      \____|  \___/   \___/|_|  \___/|____/ 
+                </pre>
+
+                <!-- Blog post container -->
+                <div class="blog-posts">
+                    <!-- Blog 1 -->
+                    <div class="blog-post">
+                        <div class="blog-title" onclick="toggleBlog(this)">
+                            + Blog 1: Cloud Security - 10/3/24
+                        </div>
+                        <div class="blog-content">
+                            <p>Cloud security is all about ensuring that data and services in the cloud are secure...</p>
+                        </div>
+                    </div>
+
+                    <!-- Blog 2 -->
+                    <div class="blog-post">
+                        <div class="blog-title" onclick="toggleBlog(this)">
+                            + Blog 2: Network Traffic Analysis - 09/24/24
+                        </div>
+                        <div class="blog-content">
+                            <p>In this project, I focused on analyzing network traffic patterns to detect anomalies...</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more blog posts similarly -->
+                </div>
             </div>
         </div>
     </div>
@@ -130,7 +162,20 @@
                 content.style.display = "block";
             }
         }
+
+        // Function to toggle blog visibility
+        function toggleBlog(element) {
+            const content = element.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.opacity = 0;
+                element.innerHTML = element.innerHTML.replace('-', '+'); // Change the icon to "+" when collapsed
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = 1;
+                element.innerHTML = element.innerHTML.replace('+', '-'); // Change the icon to "-" when expanded
+            }
+        }
     </script>
 </body>
 </html>
-
