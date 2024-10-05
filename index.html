@@ -30,7 +30,7 @@
         <!-- Terminal 1 Content (Home - Boot sequence added) -->
         <div class="terminal-content" id="terminal-1">
             <div class="content">
-                <p class="typewriter-text"></p> <!-- Boot sequence will be typed here -->
+                <pre class="sweep-text"></pre> <!-- Boot sequence will be displayed here -->
             </div>
         </div>
 
@@ -89,25 +89,26 @@
             });
         });
 
-        // Boot sequence typing effect (faster)
+        // Boot sequence sweeping effect
         document.addEventListener('DOMContentLoaded', () => {
             const bootText = `Initializing system...\nBIOS loaded.\nBoot sequence initiated...\nLoading environment...\n\nWelcome!\n\nmk@portfolio:~$ Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance at Western Governors University. As someone who is constantly asking "why" and "how", I have this insatiable curiosity to understand how everything works.`;
-            const typingSpeed = 10; // Speed up typing
-            let index = 0;
+            const lines = bootText.split('\n');
+            const sweepTextElement = document.querySelector('.sweep-text');
+            let lineIndex = 0;
 
-            function type() {
-                if (index < bootText.length) {
-                    document.querySelector('.typewriter-text').innerHTML += bootText.charAt(index);
-                    index++;
-                    setTimeout(type, typingSpeed);
+            function sweep() {
+                if (lineIndex < lines.length) {
+                    sweepTextElement.innerHTML += lines[lineIndex] + '\n';
+                    lineIndex++;
+                    setTimeout(sweep, 300); // Adjust the delay for sweeping effect
                 } else {
                     // Show blinking caret at the end of the boot sequence
-                    document.querySelector('.typewriter-text').innerHTML += ' <span class="caret">&#9608;</span>';
+                    sweepTextElement.innerHTML += ' <span class="caret">&#9608;</span>';
                 }
             }
 
-            // Start typing the boot sequence right away with no delay
-            type();
+            // Start sweeping the boot sequence
+            sweep();
         });
 
         // Function to toggle project visibility
@@ -122,7 +123,3 @@
     </script>
 </body>
 </html>
-
-
-
-
