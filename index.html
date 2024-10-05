@@ -36,7 +36,6 @@
 
         <!-- Terminal 2 Content (Projects with expandable tabs) -->
         <div class="terminal-content" id="terminal-2" style="display: none;">
-            <div class="header">mk@portfolio:~$</div>
             <div class="content">
                 <div class="project-tab">
                     <div class="project-title" onclick="toggleProject(this)">Network Traffic Analysis Visualization</div>
@@ -60,7 +59,6 @@
 
         <!-- Terminal 3 Content (Blank Terminal) -->
         <div class="terminal-content" id="terminal-3" style="display: none;">
-            <div class="header">mk@portfolio:~$</div>
             <div class="content">
                 <p><span class="prompt">mk@portfolio:~$</span> <span class="command blink">&#9608;</span></p>
             </div>
@@ -92,7 +90,7 @@
         // Boot sequence typewriter effect and introduction text
         document.addEventListener('DOMContentLoaded', () => {
             const bootText = `Initializing system...\nBIOS loaded.\nBoot sequence initiated...\nLoading environment...\n\nWelcome!\n\n`;
-            const introText = `mk@portfolio:~$ Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance at Western Governors University. As someone who is constantly asking "why" and "how", I have this insatiable curiosity to understand how everything works.`;
+            const introText = `mk@portfolio:~$ Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance at Western Governors University. As you can see, I've fallen in love with working in the shell. As someone who is constantly asking "why" and "how", I have this insatiable curiosity to understand how everything works.`;
             const sweepTextElement = document.querySelector('.sweep-text');
             let index = 0;
 
