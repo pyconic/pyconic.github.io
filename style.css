@@ -302,6 +302,7 @@ body {
     font-size: 14px;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
+    transition: display 0.5s ease; /* Remove the max-height and opacity */
 }
 
 /* Transition effect for smooth expand/collapse */
