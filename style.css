@@ -296,21 +296,34 @@ body {
 }
 
 .blog-content {
-    display: none; /* Hidden by default */
+    max-height: 0; /* Collapsed by default */
+    opacity: 0; /* Invisible by default */
+    overflow: hidden;
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
-    transition: display 0.5s ease; /* Remove the max-height and opacity */
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 /* Transition effect for smooth expand/collapse */
 .blog-content {
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    max-height: 0;
+    max-height: 0; /* Collapsed by default */
+    opacity: 0; /* Invisible by default */
     overflow: hidden;
-    opacity: 0;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Expanded blog post content */
+.blog-post.expanded .blog-content {
+    max-height: 500px; /* Adjust this value based on your content's height */
+    opacity: 1;
 }
 
 /* Scrollable area for terminal content */
