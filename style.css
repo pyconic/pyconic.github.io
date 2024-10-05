@@ -74,6 +74,7 @@ body {
     background-color: rgba(60, 60, 60, 0.6);
     color: #fff;
     padding: 5px 10px;
+    margin-bottom: 20px;
     margin-right: 5px;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
@@ -130,7 +131,6 @@ body {
 /* Project Tabs Styling */
 .project-tab {
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .project-title {
