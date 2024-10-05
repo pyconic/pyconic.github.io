@@ -188,8 +188,9 @@ body {
     color: #000;
 }
 
+
 /* Typewriter effect text */
-.typewriter-text {
+.sweep-text {
     font-family: 'Courier New', Courier, monospace;
     color: #00ff00;
     font-size: 16px;
