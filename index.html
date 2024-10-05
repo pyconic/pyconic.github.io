@@ -89,26 +89,28 @@
             });
         });
 
-        // Boot sequence sweeping effect
+        // Boot sequence typewriter effect and introduction text
         document.addEventListener('DOMContentLoaded', () => {
-            const bootText = `Initializing system...\nBIOS loaded.\nBoot sequence initiated...\nLoading environment...\n\nWelcome!\n\nmk@portfolio:~$ Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance at Western Governors University. As someone who is constantly asking "why" and "how", I have this insatiable curiosity to understand how everything works.`;
-            const lines = bootText.split('\n');
+            const bootText = `Initializing system...\nBIOS loaded.\nBoot sequence initiated...\nLoading environment...\n\nWelcome!\n\n`;
+            const introText = `mk@portfolio:~$ Hi, I'm Molly. I'm currently pursuing a Bachelor's in Cybersecurity and Information Assurance at Western Governors University. As someone who is constantly asking "why" and "how", I have this insatiable curiosity to understand how everything works.`;
             const sweepTextElement = document.querySelector('.sweep-text');
-            let lineIndex = 0;
+            let index = 0;
 
-            function sweep() {
-                if (lineIndex < lines.length) {
-                    sweepTextElement.innerHTML += lines[lineIndex] + '\n';
-                    lineIndex++;
-                    setTimeout(sweep, 300); // Adjust the delay for sweeping effect
+            function typeBootText() {
+                if (index < bootText.length) {
+                    sweepTextElement.innerHTML += bootText.charAt(index);
+                    index++;
+                    setTimeout(typeBootText, 100); // Adjust the delay for typing effect
                 } else {
-                    // Show blinking caret at the end of the boot sequence
+                    // Display introduction text all at once after boot sequence
+                    sweepTextElement.innerHTML += introText;
+                    // Show blinking caret at the end of the introduction
                     sweepTextElement.innerHTML += ' <span class="caret">&#9608;</span>';
                 }
             }
 
-            // Start sweeping the boot sequence
-            sweep();
+            // Start typing the boot sequence
+            typeBootText();
         });
 
         // Function to toggle project visibility
@@ -123,3 +125,4 @@
     </script>
 </body>
 </html>
+
