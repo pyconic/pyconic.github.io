@@ -65,6 +65,7 @@ body {
     justify-content: flex-start;
     background-color: #2e2e2e;
     padding: 0;
+    margin-bottom: 10px;
     margin: 0;
     border: none;
     background: none;
@@ -74,7 +75,6 @@ body {
     background-color: rgba(60, 60, 60, 0.6);
     color: #fff;
     padding: 5px 10px;
-    margin-bottom: 20px;
     margin-right: 5px;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
