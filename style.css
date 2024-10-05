@@ -6,7 +6,7 @@
 body {
     background-color: #000;
     color: #0f0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     line-height: 1.6;
     overflow: hidden; /* Hide scrollbars */
@@ -189,7 +189,6 @@ body {
     color: #000;
 }
 
-
 /* Typewriter effect text */
 .sweep-text {
     font-family: 'Courier New', Courier, monospace;
@@ -212,7 +211,6 @@ body {
     from { border-color: #00ff00; }
     to { border-color: transparent; }
 }
-
 
 /* Flicker effect for the terminal */
 @keyframes flicker {
@@ -255,6 +253,69 @@ body {
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
     caret-color: transparent; /* Hides the default blinking text cursor */
     animation: flicker 9s infinite, pulseGlow 6s ease-in-out infinite; /* Pulsating glow effect */
+}
+
+/* Blog Section Styling */
+.blog-terminal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.5); /* Transparent terminal */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0f0;
+}
+
+.ascii-art {
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Blog post containers */
+.blog-post {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(43, 43, 43, 0.8);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.blog-title {
+    color: #00ff00;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-title:hover {
+    background-color: rgba(43, 43, 43, 0.9);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter on hover */
+}
+
+.blog-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Transition effect for smooth expand/collapse */
+.blog-content {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Scrollable area for terminal content */
+.terminal-content {
+    max-height: 400px; /* Define the scrollable area height */
+    overflow-y: auto;
 }
 
 .header {
