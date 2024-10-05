@@ -164,17 +164,22 @@
             }
         }
 
-        // Function to toggle blog visibility
-        function toggleBlog(element) {
-            const content = element.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                element.innerHTML = element.innerHTML.replace('-', '+'); // Change the icon to "+" when collapsed
-            } else {
-                content.style.display = "block";
-                element.innerHTML = element.innerHTML.replace('+', '-'); // Change the icon to "-" when expanded
-            }
-        }
+      // Function to toggle blog visibility
+      function toggleBlog(element) {
+          const content = element.nextElementSibling;
+          if (content.style.maxHeight) {
+              // Collapse the content
+              content.style.maxHeight = null;
+              content.style.opacity = 0;
+              element.innerHTML = element.innerHTML.replace('-', '+'); // Change the icon to "+" when collapsed
+          } else {
+              // Expand the content
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.style.opacity = 1;
+              element.innerHTML = element.innerHTML.replace('+', '-'); // Change the icon to "-" when expanded
+          }
+      }
+
     </script>
 </body>
 </html>
