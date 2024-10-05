@@ -196,6 +196,9 @@ body {
     font-size: 16px;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
     white-space: pre-wrap;
+    word-wrap: break-word; /* Ensure long lines wrap within the terminal */
+    max-width: 100%; /* Keep the text within the terminal width */
+    overflow-wrap: break-word; /* Break long words to keep them inside the terminal */
 }
 
 /* Blinking caret */
