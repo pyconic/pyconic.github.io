@@ -129,6 +129,7 @@ body {
 
 /* Project Tabs Styling */
 .project-tab {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
