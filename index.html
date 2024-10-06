@@ -80,33 +80,56 @@
                        
                 </pre>
 
-                <!-- Blog post container -->
-                <div class="blog-posts">
-                    <!-- Blog 1 -->
-                    <div class="blog-post">
-                        <div class="blog-title" onclick="toggleBlog(this)">
-                            + Blog 1: Cloud Security - 10/3/24
-                        </div>
-                        <div class="blog-content">
-                            <p>Cloud security is all about ensuring that data and services in the cloud are secure...</p>
-                        </div>
-                    </div>
+                <!-- Blog Post (Terminal Style) -->
+                <pre class="log-style">
+mk@portfolio~$ cat car.log
 
-                    <!-- Blog 2 -->
-                    <div class="blog-post">
-                        <div class="blog-title" onclick="toggleBlog(this)">
-                            + Blog 2: Network Traffic Analysis - 09/24/24
-                        </div>
-                        <div class="blog-content">
-                            <p>In this project, I focused on analyzing network traffic patterns to detect anomalies...</p>
-                        </div>
-                    </div>
+[INFO] 2024-10-05 11:30:15 - Opening car.log
+[INFO] 2024-10-05 11:30:16 - Reading file contents...
+[INFO] 2024-10-05 11:30:17 - Beginning log output:
 
-                    <!-- Add more blog posts similarly -->
-                </div>
+[LOG] The '80s Dream: Why I Want a Simpler Car
+---------------------------------------------------
+I’ve always been drawn to cars from the ‘80s. No Wi-Fi, no fancy computers, just pure mechanics. There’s something so reassuring about manual roll-up windows and a lack of GPS—nobody can hack what isn’t connected. And as cars become more dependent on tech, my desire for an analog, hacker-proof ride grows stronger.
+
+A car from the ‘80s, like the **1987 BMW E30 M3**, is the perfect blend of performance and simplicity. You get the thrill of driving without the worry of someone remotely controlling your vehicle. And trust me, that’s becoming a real concern.
+
+[INFO] 2024-10-05 11:32:12 - Log continues...
+
+[WARN] 2024-10-05 11:32:50 - Vulnerabilities Detected: Modern Vehicles
+------------------------------------------------------------------------
+Today’s cars are loaded with technology—everything from **autonomous driving systems** to Bluetooth and Wi-Fi, and with that comes vulnerability. The 2023 **Pwn2Own Tesla hack** proved this when hackers exploited a Bluetooth flaw to take control of the vehicle. They didn’t even need physical access to the car! Through this attack, they could tamper with the infotainment system and gain control over core functions like unlocking the doors and starting the car.
+
+[WARN] 2024-10-05 11:33:10 - Another Major Vulnerability: Jeep Cherokee Hack
+------------------------------------------------------------------------------
+Remember the 2015 **Jeep Cherokee hack**? Hackers remotely took over the vehicle’s steering and brakes while it was driving on a highway. It’s not science fiction anymore; these attacks are real.
+
+[INFO] 2024-10-05 11:34:23 - End of section
+
+[LOG] Securing the Future of Cars
+-----------------------------------
+Can we really secure these smart, connected cars? It’s going to be tough, but there are steps we can take: 
+1. **Regular software updates**: Just like patching a computer, you need to keep the vehicle’s systems updated to prevent vulnerabilities.
+2. **Isolate critical systems**: Keep essential systems like steering and brakes separate from non-critical functions like infotainment to reduce attack vectors.
+3. **Use encryption**: Securing the communication channels between vehicle systems and external networks can prevent man-in-the-middle attacks.
+
+As much as I admire the future of **autonomous vehicles**, I can't help but think about the risks they introduce. The complexity of these systems means new vulnerabilities could emerge at any time, leaving us vulnerable to remote control or manipulation.
+
+[INFO] 2024-10-05 11:34:55 - Log continues...
+
+[LOG] The Peace of Simplicity: A Car from the '80s
+---------------------------------------------------
+So here I am, thinking about how a **1987 BMW E30 M3** or a **Toyota Land Cruiser FJ60** would give me that peace of mind. These cars are analog to their core—no over-the-air updates, no wireless vulnerabilities, just raw, mechanical engineering. The more I learn about car hacking, the more appealing these older vehicles seem.
+
+Sure, it might be inconvenient to manually roll the windows down, and I won’t have an AI assistant telling me where the nearest coffee shop is. But at least I’ll know that my car isn’t susceptible to a Bluetooth exploit or a GPS spoofing attack. There’s a certain peace in simplicity.
+
+Would you prefer a tech-loaded autonomous vehicle, or are you leaning toward simplicity like me?
+
+[INFO] 2024-10-05 11:36:23 - End of car.log
+
+                </pre>
             </div>
         </div>
-    </div>
 
     <script>
         // JavaScript to handle tab switching
