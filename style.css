@@ -319,6 +319,16 @@ body {
     font-family: 'Courier New', Courier, monospace; /* Keep the terminal look */
 }
 
+pre {
+    font-family: monospace;
+    white-space: pre-wrap; /* Ensure line breaks behave as expected */
+}
+
+.dynamic-line {
+    font-family: monospace; /* Ensure the dashes stay monospace */
+}
+
+
 /* Terminal-style log content */
 .log-style {
     background-color: rgba(30, 30, 30, 0.8); /* Slightly darker background for the log */
