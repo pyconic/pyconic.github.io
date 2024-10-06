@@ -273,57 +273,27 @@ body {
     margin-bottom: 20px;
 }
 
-/* Blog post containers */
+/* Blog post container (log-style) */
 .blog-post {
     margin-bottom: 15px;
     border-radius: 5px;
     background-color: rgba(43, 43, 43, 0.8);
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neon glow effect */
+    font-family: 'Courier New', Courier, monospace; /* Keep the terminal look */
 }
 
-.blog-title {
-    color: #00ff00;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.blog-title:hover {
-    background-color: rgba(43, 43, 43, 0.9);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Brighter on hover */
-}
-
-.blog-content {
-    max-height: 0; /* Collapsed by default */
-    opacity: 0; /* Invisible by default */
-    overflow: hidden;
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-/* Transition effect for smooth expand/collapse */
-.blog-content {
-    max-height: 0; /* Collapsed by default */
-    opacity: 0; /* Invisible by default */
-    overflow: hidden;
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-/* Expanded blog post content */
-.blog-post.expanded .blog-content {
-    max-height: 500px; /* Adjust this value based on your content's height */
-    opacity: 1;
+/* Terminal-style log content */
+.log-style {
+    background-color: rgba(30, 30, 30, 0.8); /* Slightly darker background for the log */
+    color: #00ff00; /* Green terminal text */
+    padding: 15px; /* Adds some padding for better readability */
+    border-radius: 10px; /* Rounds off the corners for that modern terminal feel */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glowing green text effect */
+    max-height: 400px; /* Limits height, making the log scrollable */
+    overflow-y: auto; /* Adds scrollbars if the content exceeds the height */
+    white-space: pre-wrap; /* Preserves formatting and line breaks */
 }
 
 /* Scrollable area for terminal content */
