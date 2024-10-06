@@ -342,6 +342,7 @@ body {
     overflow: hidden; /* Disable scrolling for the outer terminal content */
     padding: 15px; /* Adds some spacing for better readability */
     box-sizing: border-box; /* Includes padding in the size calculation */
+    margin-top: 20;
 }
 
 /* For scrollable content inside specific areas like projects and logs */
