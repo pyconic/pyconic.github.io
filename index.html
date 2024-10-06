@@ -76,6 +76,7 @@
         <!-- Terminal 3 Content (Blog with collapsible posts) -->
         <div class="terminal-content" id="terminal-3" style="display: none; overflow-y: auto;">
             <div class="content blog-terminal">
+                
                 <!-- ASCII Art Header for Blog -->
                 <pre class="ascii-art">
 ███   █    ████▄   ▄▀  
@@ -194,22 +195,6 @@ Remember: With Great Tech, Comes Great Vulnerabilities
                 content.style.display = "block";
             }
         }
-
-      // Function to toggle blog visibility
-      function toggleBlog(element) {
-          const content = element.nextElementSibling;
-          if (content.style.maxHeight) {
-              // Collapse the content
-              content.style.maxHeight = null;
-              content.style.opacity = 0;
-              element.innerHTML = element.innerHTML.replace('-', '+'); // Change the icon to "+" when collapsed
-          } else {
-              // Expand the content
-              content.style.maxHeight = content.scrollHeight + "px";
-              content.style.opacity = 1;
-              element.innerHTML = element.innerHTML.replace('+', '-'); // Change the icon to "-" when expanded
-          }
-      }
 
     </script>
 </body>
