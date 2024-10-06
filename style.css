@@ -436,18 +436,10 @@ a:hover {
 
 /* Mobile nav menu styling */
 .mobile-nav {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 4;
-    padding: 50px;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 20px; /* Add padding around the entire menu */
 }
 
 .mobile-nav a {
@@ -455,7 +447,8 @@ a:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 10px 0; /* Space between each tab */
+    padding: 5px; /* Optional: Add some padding inside each link for a larger clickable area */
 }
 
 /* Display hamburger menu on smaller screens */
