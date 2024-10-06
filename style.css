@@ -297,9 +297,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(30, 30, 30, 0.5); /* Transparent terminal */
     border-radius: 10px;
-    box-shadow: 0 0 20px #0f0;
+    
 }
 
 .ascii-art {
