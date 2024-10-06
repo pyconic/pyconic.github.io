@@ -300,6 +300,18 @@ body {
     box-sizing: border-box; /* Includes padding in the element's width/height calculation */
 }
 
+/* Scrollable container for Project Terminal */
+.scroll-box {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 15px; /* Add padding for readability */
+    background-color: rgba(30, 30, 30, 0.8); /* Darker background */
+    color: #00ff00; /* Terminal green text */
+    white-space: pre-wrap; /* Ensure line breaks and wrapping */
+    word-wrap: break-word; /* Break long words to fit */
+    border-radius: 10px; /* Rounded corners */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glowing green effect */
+}
 
 .terminal-content {
     max-height: 100%; /* Ensure the content fills but doesn't overflow the terminal */
