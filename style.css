@@ -145,6 +145,7 @@ body {
     align-items: flex-start; /* Aligns content to the left */
     scrollbar-width: thin;
     scrollbar-color: #2e2e2e #111; /* Dark gray scrollbar */
+    gap: 2px;
 }
 
 /* Hide the scrollbar until user scrolls */
