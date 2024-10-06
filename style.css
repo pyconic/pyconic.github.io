@@ -104,6 +104,7 @@ body {
     left: -100%; /* Start off the screen to the left */
     width: 100%;
     height: 100%;
+    padding: 2px 8px;
     background: linear-gradient(120deg, rgba(0, 255, 0, 0) 0%, rgba(0, 255, 0, 0.3) 50%, rgba(0, 255, 0, 0) 100%);
     transition: none;
 }
@@ -179,7 +180,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 2px; /* Reduce space between project titles */
+    margin-bottom: 0px; /* Reduce space between project titles */
     padding: 10px; /* Adjust for consistency */
 }
 
