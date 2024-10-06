@@ -197,10 +197,13 @@ Remember: ***With Great Tech, Comes Great Vulnerabilities***
         }
 
         function truncatePreLine(preElement, lineCharacter) {
-            const preWidth = preElement.offsetWidth; // Get the width of the pre element
-            const charWidth = getCharacterWidth(lineCharacter, preElement); // Get the width of the line character
-            const maxChars = Math.floor(preWidth / charWidth); // Calculate how many characters fit in one line
-            return lineCharacter.repeat(maxChars); // Return the truncated line
+            const preWidth = preElement.closest('pre').clientWidth; // Get the width of the closest <pre> element
+            console.log('Pre element width:', preWidth); // Debugging log to check the width
+            const charWidth = getCharacterWidth(lineCharacter, preElement); // Get the width of the dash character (-)
+            console.log('Character width:', charWidth); // Debugging log to check the width of a dash
+            const maxChars = Math.floor(preWidth / charWidth); // Calculate how many characters fit in the pre element
+            console.log('Max characters:', maxChars); // Debugging log to check the max characters that fit
+            return lineCharacter.repeat(maxChars);
         }
 
         // Helper function to calculate the width of a character
