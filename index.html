@@ -34,44 +34,44 @@
             </div>
         </div>
 
-        <!-- Terminal 2 Content (Projects with expandable tabs) -->
+        <!-- Terminal 2 Content (Projects with expandable tabs in a scrollable box) -->
         <div class="terminal-content" id="terminal-2" style="display: none;">
             <div class="content project-terminal">
-                <pre class="scroll-box">
-                    <!-- Scrollable Project Content -->
-
+                <!-- Scrollable Project Content -->
+                <div class="scroll-box">
                     <!-- Project 1 -->
                     <div class="project-tab">
                         <div class="project-title" onclick="toggleProject(this)">AWS Cloud Security</div>
-                        <div class="project-content">
+                        <div class="project-content" style="display: none;">
                             <p>Description: AWS Cloud Security project utilizing IAM.</p>
                             <p>Technologies: EC2, IAM, Tags</p>
                             <p><a href="https://github.com/pyconic/AWS-Cloud-Security" target="_blank">View on GitHub</a></p>
                         </div>
                     </div>
-                    
+
                     <!-- Project 2 -->
                     <div class="project-tab">
                         <div class="project-title" onclick="toggleProject(this)">Network Traffic Analysis Visualization</div>
-                        <div class="project-content">
+                        <div class="project-content" style="display: none;">
                             <p>Description: A tool that visualizes real-time network traffic.</p>
                             <p>Technologies: Python, Flask, D3.js</p>
                             <p><a href="https://github.com/pyconic/Network-Traffic-Analysis-Visualization" target="_blank">View on GitHub</a></p>
                         </div>
                     </div>
-                    
-                    <!-- Prject 3 -->
+
+                    <!-- Project 3 -->
                     <div class="project-tab">
                         <div class="project-title" onclick="toggleProject(this)">Port Scanner</div>
-                        <div class="project-content">
+                        <div class="project-content" style="display: none;">
                             <p>Description: A lightweight Python-based port scanner.</p>
                             <p>Technologies: Python, Scapy</p>
                             <p><a href="https://github.com/pyconic/Port-Scanner" target="_blank">View on GitHub</a></p>
                         </div>
                     </div>
-                </pre>
+                </div>
             </div>
         </div>
+
 
         <!-- Terminal 3 Content (Blog with collapsible posts) -->
         <div class="terminal-content" id="terminal-3" style="display: none; overflow-y: auto;">
