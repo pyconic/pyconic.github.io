@@ -414,3 +414,57 @@ a:hover {
     50% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/* Hamburger menu styling for mobile responsiveness */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: #0f0;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Mobile nav menu styling */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 4;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav a {
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* Display hamburger menu on smaller screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .terminal-tabs {
+        display: none;
+    }
+}
