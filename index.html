@@ -214,10 +214,20 @@ Remember: ***With Great Tech, Comes Great Vulnerabilities***
             }
         }
 
+        // Function to handle the mobile navigation menu
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.style.display = (mobileNav.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function showTerminal(terminalNumber) {
+            document.getElementById('mobile-nav').style.display = 'none';
+            tabs.forEach(t => t.classList.remove('active'));
+            terminals.forEach(terminal => terminal.style.display = 'none');
+            document.getElementById(`terminal-${terminalNumber}`).style.display = 'block';
+            document.querySelector(`.tab[data-terminal="${terminalNumber}"]`).classList.add('active');
+        }
         
-
-
-
     </script>
 </body>
 </html>
