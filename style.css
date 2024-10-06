@@ -292,8 +292,12 @@ body {
     font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Glowing green text effect */
     max-height: 400px; /* Limits height, making the log scrollable */
-    overflow-y: auto; /* Adds scrollbars if the content exceeds the height */
-    white-space: pre-wrap; /* Preserves formatting and line breaks */
+    overflow-y: auto; /* Adds vertical scrollbars if the content exceeds the height */
+    white-space: pre-wrap; /* Preserves line breaks and wraps long lines */
+    word-wrap: break-word; /* Ensures long words wrap to fit within the container */
+    overflow-wrap: break-word; /* Alternative for better browser support */
+    max-width: 100%; /* Ensures the log content fits within the terminal width */
+    box-sizing: border-box; /* Includes padding in the element's width/height calculation */
 }
 
 /* Scrollable area for terminal content */
