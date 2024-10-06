@@ -218,12 +218,17 @@ Remember: ***With Great Tech, Comes Great Vulnerabilities***
             return width;
         }
 
-        // Function to apply the truncation dynamically
-        function applyTruncateToPreLines() {
+        function isVisible(element) {
+            return !!(element.offsetWidth || element.offsetHeight || element.getClientRects().length);
+        }
+
+       function applyTruncateToPreLines() {
             const preElements = document.querySelectorAll('pre .dynamic-line');
             preElements.forEach(preElement => {
-                const truncatedLine = truncatePreLine(preElement, '-');
-                preElement.textContent = truncatedLine; // Update the line inside the pre element
+                if (isVisible(preElement)) { // Only run if the element is visible
+                    const truncatedLine = truncatePreLine(preElement, '-');
+                    preElement.textContent = truncatedLine; // Update the line inside the pre element
+                }
             });
         }
 
